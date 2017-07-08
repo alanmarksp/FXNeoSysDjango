@@ -6,4 +6,4 @@ from traders.models import Trader
 class TraderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trader
-        fields = '__all__'
+        fields = ('username', 'email', 'first_name', 'last_name')

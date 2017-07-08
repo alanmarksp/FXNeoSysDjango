@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login as django_login
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import list_route
 from rest_framework.exceptions import ValidationError
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.viewsets import GenericViewSet
 
@@ -12,6 +13,7 @@ from traders.serializers import TraderSerializer
 
 class AuthenticationView(GenericViewSet):
     serializer_class = AuthenticationSerializer
+    permission_classes = (AllowAny,)
 
     @list_route(methods=['POST'])
     def login(self, request):

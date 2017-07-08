@@ -1,5 +1,5 @@
-from rest_framework import generics
+from rest_framework.viewsets import GenericViewSet
 
 
-class QuoteView(generics.GenericAPIView):
+class QuoteView(GenericViewSet):
     pass
