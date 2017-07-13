@@ -1,3 +1,5 @@
 .idea/
 *.pyc
 *.pyo
+config_env_varaibles
+celerybeat-schedule
