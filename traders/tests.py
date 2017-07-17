@@ -18,4 +18,4 @@ class Traders(TestCase):
 
     def test_traders_profile_not_logged_ko(self):
         response = self.client.get('{}profile/'.format(self.base_route))
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 401)
