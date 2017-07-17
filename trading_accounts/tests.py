@@ -30,7 +30,7 @@ class TradingAccounts(TestCase):
 
     def test_trading_accounts_list_accounts_not_logged_ko(self):
         response = self.client.get(self.base_route)
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 401)
 
     def create_trading_accounts(self):
         for i in range(self.trading_accounts_count):
